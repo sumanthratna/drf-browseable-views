@@ -33,9 +33,16 @@ description = "Web APIs for Django, made easy."
 category = "main"
 optional = false
 python-versions = ">=3.5"
+develop = false
 
 [package.dependencies]
 django = ">=2.2"
+
+[package.source]
+type = "git"
+url = "ssh://git@github.com/sumanthratna/django-rest-framework.git"
+reference = "router-views"
+resolved_reference = "0dad5f15bf9be481c9140a0bdc5495cf7af38916"
 
 [[package]]
 name = "pytz"
@@ -56,7 +63,7 @@ python-versions = ">=3.5"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "26c88b58b7cc39d740a5a1cb14358b853e8225ef91f6dd33a6e6998109d89f05"
+content-hash = "86d2464c1905199ed837c1cf4ccfa7018e2fdec5ebb8467534a936462ea79843"
 
 [metadata.files]
 asgiref = [
@@ -67,9 +74,7 @@ django = [
     {file = "Django-3.1.4-py3-none-any.whl", hash = "sha256:5c866205f15e7a7123f1eec6ab939d22d5bde1416635cab259684af66d8e48a2"},
     {file = "Django-3.1.4.tar.gz", hash = "sha256:edb10b5c45e7e9c0fb1dc00b76ec7449aca258a39ffd613dbd078c51d19c9f03"},
 ]
-djangorestframework = [
-    {file = "djangorestframework-3.12.2-py3-none-any.whl", hash = "sha256:0209bafcb7b5010fdfec784034f059d512256424de2a0f084cb82b096d6dd6a7"},
-]
+djangorestframework = []
 pytz = [
     {file = "pytz-2020.5-py2.py3-none-any.whl", hash = "sha256:16962c5fb8db4a8f63a26646d8886e9d769b6c511543557bc84e9569fb9a9cb4"},
     {file = "pytz-2020.5.tar.gz", hash = "sha256:180befebb1927b16f6b57101720075a984c019ac16b1b7575673bea42c6c3da5"},
