@@ -15,7 +15,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework.routers import DefaultRouter
+from .views import MockView, mock_view, MockViewSet
 
+# in this demo, we don't register /admin/ in the router to show how you can
+# exclude a route from appearing in the browseable API. the browseable API will
+# only show views that are registered in the router.
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+
+django_view_router = DefaultRouter()
+# TODO: django-class2 and drf-viewset do not work
+# `basename` is required:
+django_view_router.register(
+    'django-class1', MockView.as_view(), basename='example1.1')
+django_view_router.register('django-class2', MockView, basename='example1.2')
+django_view_router.register('django-function', mock_view, basename='example2')
+django_view_router.register('drf-viewset', MockViewSet, basename='example3')
+# the browseable API should be at / and should display the above three routes
+
+
+urlpatterns += django_view_router.urls

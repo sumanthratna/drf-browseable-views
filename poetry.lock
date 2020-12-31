@@ -42,7 +42,7 @@ django = ">=2.2"
 type = "git"
 url = "ssh://git@github.com/sumanthratna/django-rest-framework.git"
 reference = "router-views"
-resolved_reference = "0dad5f15bf9be481c9140a0bdc5495cf7af38916"
+resolved_reference = "b7e32767ab08afb6ea3e78a5526685605d42326e"
 
 [[package]]
 name = "pytz"
